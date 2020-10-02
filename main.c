@@ -2,7 +2,12 @@
 #include "com.h"
 
 
-int main() {
+int main(int argc, char* argv[]) {
+
+    /**/
+    if(argc > 1) {
+        printf("arg 1: %s", argv[1]);
+    }
 
     bool res = openPort("/dev/ttyUSB0",B9600);
     if(!res)
